@@ -30,16 +30,16 @@ def draw_hand_landmarks(image, hand_landmarks):
                 image, landmarks, mp_hands.HAND_CONNECTIONS)
 
             # getting the X coordinate of the ring finger tip.
-            x_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].x * image_width
+            #x_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].x * image_width
             # getting the Y coordinate of the ring finger tip.
-            y_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].y * image_height
+            #y_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].y * image_height
 
-            print(f'Ring finger tip coordinates: (',
+            #print(f'Ring finger tip coordinates: (',
 
-                  f'{x_cord_ring_finger}, '
+                  #f'{x_cord_ring_finger}, '
 
-                  f'{y_cord_ring_finger})'
-                  )
+                  #f'{y_cord_ring_finger})'
+                  #)
 
 
 while True:
