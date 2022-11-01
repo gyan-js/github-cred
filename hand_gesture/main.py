@@ -36,6 +36,16 @@ while True:
     results = hands.process(img)
     hand_landmarks = results.multi_hand_landmarks
 
+    if results.multi_hand_landmarks:
+        for hand_landmark in results.multi_hand_landmarks:
+            #accessing the landmarks by their position
+            lm_list=[]
+            for id ,lm in enumerate(hand_landmark.landmark):
+                lm_list.append(lm)
+
+            
+
+
     draw_hand_landmarks(img, hand_landmarks)
     count_fingers(img, hand_landmarks)
 
@@ -49,4 +59,3 @@ while True:
 cv2.destroyAllWindows()
 
 # TODO: WRITE A FOR LOOP TO ACCESS ALL THE FINGER TIPS FROM THE FINGER TIP ARRAY
-
