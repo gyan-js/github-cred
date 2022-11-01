@@ -17,9 +17,7 @@ def count_fingers(image, hand_landmarks, handNo=0):
     fingers = []
     if hand_landmarks:
         landmarks = hand_landmarks[handNo].landmark
-        # TODO: print the landmarks for the counted fingers
-
-# defined a function to draw hand landmakrs on the image...
+        print(landmarks)
 
 
 def draw_hand_landmarks(image, hand_landmarks):
@@ -29,19 +27,7 @@ def draw_hand_landmarks(image, hand_landmarks):
             mp_drawing.draw_landmarks(
                 image, landmarks, mp_hands.HAND_CONNECTIONS)
 
-            # getting the X coordinate of the ring finger tip.
-            #x_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].x * image_width
-            # getting the Y coordinate of the ring finger tip.
-            #y_cord_ring_finger = hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].y * image_height
-
-            #print(f'Ring finger tip coordinates: (',
-
-                  #f'{x_cord_ring_finger}, '
-
-                  #f'{y_cord_ring_finger})'
-                  #)
-
-
+          
 while True:
     success, img = vid_capture.read()
 
